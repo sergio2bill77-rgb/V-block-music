@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-align: center;
+  background-color: #000;
+}
+
+/* ===== INTRO ===== */
+.intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slides img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.slides img.ativo {
+  opacity: 1;
+}
+
+.intro-conteudo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px #b300ff;
+  animation: pulsar 3s infinite;
+}
+
+@keyframes pulsar {
+  0% { box-shadow: 0 0 15px #b300ff; }
+  50% { box-shadow: 0 0 35px #ff00ff; }
+  100% { box-shadow: 0 0 15px #b300ff; }
+}
+
+.intro-conteudo h1 {
+  font-size: 50px;
+  color: #b300ff;
+  text-shadow: 0 0 20px #b300ff, 0 0 40px #ff00ff;
+}
+
+#entrarBtn {
+  background-color: #b300ff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#entrarBtn:hover {
+  background-color: white;
+  color: #b300ff;
+}
+
+/* ===== Cabeçalho ===== */
+header {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 40px 20px;
+}
+
+header .logo {
+  width: 100px;
+  border-radius: 50%;
+}
+
+nav a {
+  color: #b300ff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: white;
+}
+
+/* ===== Seções ===== */
+section {
+  padding: 50px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  margin: 20px 0;
+  border-radius: 20px;
+}
+
+/* ===== Galeria ===== */
+.galeria .imagens {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.galeria img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: 0.4s;
+}
+
+.galeria img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #b300ff;
+}
+
+/* ===== Rodapé ===== */
+footer {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  font-size: 14px;
+}
